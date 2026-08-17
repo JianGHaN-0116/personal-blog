@@ -1,0 +1,95 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+import { ABOUT_BACKGROUND } from "../config";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    {ABOUT_BACKGROUND}
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="School of Information Science and Engineering"
+      subtitle="2023 - Present at University of Jinan, Jinan, China"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Research Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="MLNBA Lab Member"
+      subtitle="2023 - Present at University of Jinan"
+    >
+      Research focus on network security measurement, intelligent threat detection, and trustworthy security analysis. 
+      Current projects include encrypted traffic analysis, IPv6 network measurement, asset discovery, and AI-driven security analytics.
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Publications</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <strong>Evaluating Detector-Assisted Traffic Control in Edge-IIoT Networks: Calibration, Artifacts, and Compact OVS/tc Executability</strong>
+      <br/><em>Journal of Network and Systems Management (Under Review)</em>
+    </li>
+    <li>
+      <strong>FF-OSD: A Flow-Fingerprint Baseline for Open-Set Unknown Attack Screening on IoT Gateway-Observable Traffic</strong>
+      <br/><em>APCC 2026 (Under Review)</em>
+    </li>
+    <li>
+      <strong>MAT: Security Monitoring and Profiling for AI Agent Ecosystems</strong>
+      <br/><em>DAI2026 (Preprint)</em>
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Patents</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      一种面向 IPv6 网络空间测绘的多模型协同智能编排与操作系统识别方法及系统
+      <br/><em>申请中 (第二发明人，共四位发明人)</em>
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-xl font-bold">Network</div>
+    <ul class="list-disc mx-6 mb-4">
+      <li>TCP/IP, IPv6</li>
+    </ul>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-xl font-bold">Programming</div>
+    <ul class="list-disc mx-6 mb-4">
+      <li>C/C++, Python, Go, Rust, Docker</li>
+    </ul>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-xl font-bold">AI</div>
+    <ul class="list-disc mx-6 mb-4">
+      <li>Agent</li>
+    </ul>
+  </div>
+</BaseLayout>

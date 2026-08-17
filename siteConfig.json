@@ -1,0 +1,270 @@
+{
+  "name": "JianGHaN",
+  "title": "Student in UJN ",
+  "subtitle": "Student @ UJN ISE MLNBA",
+  "heroDescription": "Exploring the frontiers of cyberspace security through rigorous research and innovative engineering. Focused on encrypted traffic analysis, IPv6 measurement, and AI-driven security solutions.",
+  "email": "18363920097@163.com",
+  "github": "https://github.com/JianGHaN-0116",
+  "githubUsername": "JianGHaN-0116",
+  "slogan": "Securing the digital world, one packet at a time.",
+  "avatar": "https://avatars.githubusercontent.com/u/240411628?v=4",
+  "about": {
+    "background": "I am a student at the School of Information Science and Engineering, University of Jinan, and a member of the MLNBA Lab. My research interests focus on network security measurement, intelligent threat detection, and trustworthy security analysis. My current research explores encrypted traffic analysis, IPv6 network measurement, asset discovery, and AI-driven security analytics, with the goal of developing practical and interpretable methods for understanding and defending complex cyberspace environments.",
+    "interests": "My research interests focus on network security measurement, intelligent threat detection, and trustworthy security analysis. I am interested in leveraging machine learning, knowledge graphs, large language models, and security analytics techniques to analyze network traffic, security logs, threat intelligence, vulnerability information, and software artifacts for attack detection, attack-chain correlation, threat tracing, and risk assessment. In particular, I hope to study encrypted traffic metadata analysis, IPv6 network measurement and asset discovery, multi-source security intelligence fusion, threat intelligence knowledge graphs, software supply chain security, and LLM-assisted vulnerability analysis. \nBeyond network security analytics, I am also interested in exploring the integration of cryptographic techniques, privacy-preserving computation, and digital content security with intelligent security analysis, including privacy-aware threat detection, secure collaborative analysis, and the identification of malicious or manipulated information in complex cyberspace environments. My long-term goal is to develop automated, interpretable, privacy-aware, and generalizable security analysis methods that can be effectively deployed for real-world attack detection, attribution, and defense.",
+    "cards": [
+      {
+        "icon": "flask",
+        "title": "Research Focus",
+        "description": "AI-Driven Cybersecurity Analytics, with a focus on Cyberspace Measurement, Intelligent Threat Detection and Proactive Defense, as well as the Application of Cryptography and Privacy-Preserving Technologies in Trusted Security Analysis."
+      },
+      {
+        "icon": "terminal",
+        "title": "Engineering Practice",
+        "description": "Building production-grade security tools, scanning systems, and AI-powered analysis platforms."
+      }
+    ]
+  },
+  "research": [
+    {
+      "tags": [
+        "IDS/IPS",
+        "Firewall",
+        "Zero Trust"
+      ],
+      "title": "Network Security",
+      "description": "Vulnerability detection, intrusion detection systems, and security architecture design for enterprise networks."
+    },
+    {
+      "tags": [
+        "ML",
+        "Deep Learning",
+        "TLS"
+      ],
+      "title": "Encrypted Traffic Analysis",
+      "description": "Identifying and classifying encrypted network traffic using machine learning and deep learning approaches."
+    },
+    {
+      "tags": [
+        "IPv6",
+        "Scanning",
+        "Topology"
+      ],
+      "title": "IPv6 Measurement",
+      "description": "Large-scale IPv6 address scanning, topology discovery, and network reachability analysis."
+    },
+    {
+      "tags": [
+        "LLM",
+        "Agent",
+        "Automation"
+      ],
+      "title": "AI for Security",
+      "description": "Applying artificial intelligence techniques to automate threat detection, response, and security analytics."
+    },
+    {
+      "tags": [
+        "Multi-Agent",
+        "Systems",
+        "AgentOps",
+        "Network Measurement"
+      ],
+      "title": "Security of Agent",
+      "description": "Explores the security of AI agents and multi-agent systems, focusing on behavior monitoring, threat detection, trust assessment, interaction auditing, and dependency analysis. It aims to improve the visibility, reliability, and resilience of agent ecosystems in dynamic and partially observable environments."
+    }
+  ],
+  "projects": [
+    {
+      "demo": "",
+      "name": "Gravity-Agent-Scanner",
+      "github": "https://github.com/JianGHaN-0116/Gravity-Agent-Scanner",
+      "techStack": [
+        "Python",
+        "IPv6",
+        "AsyncIO",
+        "Redis"
+      ],
+      "highlights": "Distributed architecture, intelligent target generation",
+      "description": "Distributed network scanning system with IPv6 intelligence agent for large-scale address discovery and analysis."
+    },
+    {
+      "demo": "",
+      "name": "RedAgent",
+      "github": "https://github.com/JianGHaN-0116/RedAgent",
+      "techStack": [
+        "Python",
+        "LLM",
+        "ReAct",
+        "Security"
+      ],
+      "highlights": "LLM-driven attack chain generation",
+      "description": "AI-powered red team automation framework for penetration testing and vulnerability assessment."
+    },
+    {
+      "demo": "",
+      "name": "Kylin-Sentry",
+      "github": "https://github.com/JianGHaN-0116/Kylin-sentry",
+      "techStack": [
+        "Nftables",
+        "Netfilter",
+        "Tayga",
+        "BIND9",
+        "FRP",
+        "IPRoute2",
+        "VXLAN",
+        "Python",
+        "Dnsmasq",
+        "PBR4"
+      ],
+      "highlights": "An agentless IPv4/IPv6 convergence security gateway built on openKylin that provides transparent VPN tunneling, zero-copy traffic mirroring to cloud AI analyzers, and dynamic threat response without requiring client software on IoT devices.",
+      "description": "Based on openKylin and native Linux kernel IPv6 integrated security gateway"
+    },
+    {
+      "demo": "",
+      "name": "Distribute Zmap",
+      "github": "https://github.com/JianGHaN-0116/Distribute-Zmap",
+      "techStack": [
+        "C",
+        "Python",
+        "Roff",
+        "CMake",
+        "Shell",
+        "Yacc"
+      ],
+      "highlights": "Distribute Zmap delivers a scalable distributed scanning framework with robust task orchestration and significantly enhanced IPv6 stability and crash resilience compared to the official Zmap project.",
+      "description": "Distribute Zmap is an enhanced and scalable version of the official Zmap project, specifically engineered for large-scale distributed scanning and improved IPv6 functionality."
+    },
+    {
+      "demo": "",
+      "name": "Sentinel Gateway",
+      "github": "https://github.com/JianGHaN-0116/sentinel-gateway",
+      "techStack": [
+        "Vue3",
+        "FastAPI",
+        "Go",
+        "PostgreSQL",
+        "ClickHouse",
+        "Redis",
+        "Docker Compose"
+      ],
+      "highlights": "A proprietary multi-evidence fusion engine for application identification — leveraging weighted scoring across 9 evidence categories instead of traditional port matching. Features real-time Zero Trust and DLP integration for risk-adaptive policy enforcement, AI-assisted asynchronous policy generation and event analysis without compromising 10 Gbps wire-speed throughput, and full OpenAppFilter ecosystem compatibility with an independently developed, fully controllable full-stack architecture.",
+      "description": "Designed for 10Gbps high-speed networks, Sentinel Gateway is an intelligent Internet behavior security management system. By converging multi-evidence application identification, Zero Trust dynamic risk assessment, DLP, and an AI Security Copilot into a unified gateway, it achieves a comprehensive, closed-loop security governance cycle: Identify, Assess, Protect, and Audit."
+    },
+    {
+      "demo": "",
+      "name": "SecureLink",
+      "github": "https://github.com/JianGHaN-0116/SecureLink",
+      "techStack": [
+        "Go",
+        "Vue",
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Docker"
+      ],
+      "highlights": "SecureLink’s highlights are a strong Go-based backend, a modern Vue + TypeScript frontend, and a full-stack architecture that balances performance, usability, and maintainability.",
+      "description": "A lightweight, security-focused link management project designed to protect and share URLs safely with simple, reliable access control."
+    },
+    {
+      "demo": "",
+      "name": "MAT: Security Monitoring and Profiling for AI Agent Ecosystems",
+      "github": "",
+      "techStack": [
+        "Python",
+        "Docker",
+        "MCP",
+        "Scapy",
+        "ZMap",
+        "LLM APIs"
+      ],
+      "highlights": "Builds evidence-backed agent inventories, capability profiles, and dependency graphs from multiple external signals.  Maintains provenance-aware, versioned profiles to track role drift, node failures, and topology changes.   Uses adaptive probing and uncertainty-aware reasoning to reduce false identification under incomplete or conflicting evidence.",
+      "description": "MAT provides external security visibility for partially observable AI agent ecosystems. It discovers agents from authorized, unlabeled endpoints and combines protocol probing, behavioral validation, evidence fusion, and LLM reasoning to identify, roles, capabilities, dependencies, and ecosystem changes without application or host-side instrumentation."
+    }
+  ],
+  "publications": [
+    {
+      "title": "Evaluating Detector-Assisted Traffic Control in Edge-IIoT Networks: Calibration, Artifacts, and Compact OVS/tc Executability",
+      "venue": " Journal of Network and Systems Management",
+      "status": "review",
+      "contribution": ""
+    },
+    {
+      "title": "FF-OSD: A Flow-Fingerprint Baseline for Open-Set Unknown Attack Screening on IoT Gateway-Observable Traffic",
+      "venue": "APCC 2026",
+      "status": "review",
+      "contribution": ""
+    },
+    {
+      "title": "MAT: Security Monitoring and Profiling for AI Agent Ecosystems",
+      "venue": "DAI2026",
+      "status": "preprint",
+      "contribution": ""
+    }
+  ],
+  "patents": [
+    {
+      "title": "一种面向 IPv6 网络空间测绘的多模型协同智能编排与操作系统识别方法及系统",
+      "number": "申请中",
+      "status": "applied",
+      "description": "第二发明人，共四位发明人"
+    }
+  ],
+  "experience": [
+    {
+      "year": "2023 - Present",
+      "title": "MLNBA",
+      "description": "",
+      "organization": "UJN"
+    }
+  ],
+  "skills": [
+    {
+      "items": [
+        "TCP/IP，IPv6"
+      ],
+      "category": "Network"
+    },
+    {
+      "items": [
+        "C/C++，Python，Go，Rust，Docker"
+      ],
+      "category": "Program"
+    },
+    {
+      "items": [
+        "Agent"
+      ],
+      "category": "AI"
+    }
+  ],
+  "nav": [
+    {
+      "href": "#home",
+      "label": "Home"
+    },
+    {
+      "href": "#about",
+      "label": "About"
+    },
+    {
+      "href": "#research",
+      "label": "Research"
+    },
+    {
+      "href": "#projects",
+      "label": "Projects"
+    },
+    {
+      "href": "#publications",
+      "label": "Publications"
+    },
+    {
+      "href": "#experience",
+      "label": "Experience"
+    },
+    {
+      "href": "#contact",
+      "label": "Contact"
+    }
+  ]
+}

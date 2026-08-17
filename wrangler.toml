@@ -1,0 +1,10 @@
+name = "jianghan-blog"
+compatibility_date = "2024-01-01"
+
+# Pages configuration for Cloudflare deployment
+# No wrangler.toml is strictly required for Pages projects,
+# but this file can be used for additional Workers configuration if needed
+
+# The actual build configuration will be set in Cloudflare Pages dashboard or via CLI:
+# Build command: pnpm run build
+# Build output directory: dist

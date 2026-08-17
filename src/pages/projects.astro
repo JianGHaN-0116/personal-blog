@@ -1,0 +1,131 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+
+const projects = [
+  {
+    name: "Gravity-Agent-Scanner",
+    github: "https://github.com/JianGHaN-0116/Gravity-Agent-Scanner",
+    techStack: ["Python", "IPv6", "AsyncIO", "Redis"],
+    highlights: "Distributed architecture, intelligent target generation",
+    description: "Distributed network scanning system with IPv6 intelligence agent for large-scale address discovery and analysis.",
+    badge: "Featured"
+  },
+  {
+    name: "RedAgent",
+    github: "https://github.com/JianGHaN-0116/RedAgent",
+    techStack: ["Python", "LLM", "ReAct", "Security"],
+    highlights: "LLM-driven attack chain generation",
+    description: "AI-powered red team automation framework for penetration testing and vulnerability assessment."
+  },
+  {
+    name: "Kylin-Sentry",
+    github: "https://github.com/JianGHaN-0116/Kylin-sentry",
+    techStack: ["Nftables", "Netfilter", "Tayga", "BIND9", "FRP", "IPRoute2", "VXLAN", "Python", "Dnsmasq", "PBR4"],
+    highlights: "An agentless IPv4/IPv6 convergence security gateway built on openKylin that provides transparent VPN tunneling, zero-copy traffic mirroring to cloud AI analyzers, and dynamic threat response without requiring client software on IoT devices.",
+    description: "Based on openKylin and native Linux kernel IPv6 integrated security gateway",
+    badge: "NEW"
+  },
+  {
+    name: "Distribute Zmap",
+    github: "https://github.com/JianGHaN-0116/Distribute-Zmap",
+    techStack: ["C", "Python", "Roff", "CMake", "Shell", "Yacc"],
+    highlights: "Distribute Zmap delivers a scalable distributed scanning framework with robust task orchestration and significantly enhanced IPv6 stability and crash resilience compared to the official Zmap project.",
+    description: "Distribute Zmap is an enhanced and scalable version of the official Zmap project, specifically engineered for large-scale distributed scanning and improved IPv6 functionality."
+  },
+  {
+    name: "Sentinel Gateway",
+    github: "https://github.com/JianGHaN-0116/sentinel-gateway",
+    techStack: ["Vue3", "FastAPI", "Go", "PostgreSQL", "ClickHouse", "Redis", "Docker Compose"],
+    highlights: "A proprietary multi-evidence fusion engine for application identification — leveraging weighted scoring across 9 evidence categories instead of traditional port matching. Features real-time Zero Trust and DLP integration for risk-adaptive policy enforcement, AI-assisted asynchronous policy generation and event analysis without compromising 10 Gbps wire-speed throughput, and full OpenAppFilter ecosystem compatibility with an independently developed, fully controllable full-stack architecture.",
+    description: "Designed for 10Gbps high-speed networks, Sentinel Gateway is an intelligent Internet behavior security management system. By converging multi-evidence application identification, Zero Trust dynamic risk assessment, DLP, and an AI Security Copilot into a unified gateway, it achieves a comprehensive, closed-loop security governance cycle: Identify, Assess, Protect, and Audit.",
+    badge: "FEATURED"
+  },
+  {
+    name: "SecureLink",
+    github: "https://github.com/JianGHaN-0116/SecureLink",
+    techStack: ["Go", "Vue", "TypeScript", "HTML", "CSS", "JavaScript", "Docker"],
+    highlights: "SecureLink's highlights are a strong Go-based backend, a modern Vue + TypeScript frontend, and a full-stack architecture that balances performance, usability, and maintainability.",
+    description: "A lightweight, security-focused link management project designed to protect and share URLs safely with simple, reliable access control."
+  },
+  {
+    name: "MAT: Security Monitoring and Profiling for AI Agent Ecosystems",
+    github: "",
+    techStack: ["Python", "Docker", "MCP", "Scapy", "ZMap", "LLM APIs"],
+    highlights: "Builds evidence-backed agent inventories, capability profiles, and dependency graphs from multiple external signals. Maintains provenance-aware, versioned profiles to track role drift, node failures, and topology changes. Uses adaptive probing and uncertainty-aware reasoning to reduce false identification under incomplete or conflicting evidence.",
+    description: "MAT provides external security visibility for partially observable AI agent ecosystems. It discovers agents from authorized, unlabeled endpoints and combines protocol probing, behavioral validation, evidence fusion, and LLM reasoning to identify, roles, capabilities, dependencies, and ecosystem changes without application or host-side instrumentation.",
+    badge: "Research"
+  }
+];
+
+// Group projects by category
+const securityProjects = projects.filter(p => 
+  p.name.includes("Sentinel") || p.name.includes("Kylin") || p.name.includes("SecureLink")
+);
+
+const scanningProjects = projects.filter(p => 
+  p.name.includes("Gravity") || p.name.includes("Zmap")
+);
+
+const aiProjects = projects.filter(p => 
+  p.name.includes("RedAgent") || p.name.includes("MAT")
+);
+---
+
+<BaseLayout title="Projects" sideBarActiveItemID="projects">
+  <div>
+    <div class="text-3xl w-full font-bold mb-5">Security Gateway & Infrastructure</div>
+  </div>
+
+  {securityProjects.map((project, index) => (
+    <>
+      <HorizontalCard
+        title={project.name}
+        img="/post_img.webp"
+        desc={project.description}
+        url={project.github || "#"}
+        badge={project.badge}
+        tags={project.techStack.slice(0, 4)}
+        tagsAsLabels={true}
+      />
+      {index < securityProjects.length - 1 && <div class="divider my-0"></div>}
+    </>
+  ))}
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Network Scanning & Measurement</div>
+  </div>
+
+  {scanningProjects.map((project, index) => (
+    <>
+      <HorizontalCard
+        title={project.name}
+        img="/post_img.webp"
+        desc={project.description}
+        url={project.github}
+        badge={project.badge}
+        tags={project.techStack.slice(0, 4)}
+      />
+      {index < scanningProjects.length - 1 && <div class="divider my-0"></div>}
+    </>
+  ))}
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">AI & Agent Security</div>
+  </div>
+
+  {aiProjects.map((project, index) => (
+    <>
+      <HorizontalCard
+        title={project.name}
+        img="/post_img.webp"
+        desc={project.description}
+        url={project.github || "#"}
+        badge={project.badge}
+        tags={project.techStack.slice(0, 4)}
+        tagsAsLabels={true}
+      />
+      {index < aiProjects.length - 1 && <div class="divider my-0"></div>}
+    </>
+  ))}
+</BaseLayout>

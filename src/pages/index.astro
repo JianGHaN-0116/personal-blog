@@ -1,0 +1,96 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+import createSlug from "../lib/createSlug"
+import { NAME, SUBTITLE, HERO_DESCRIPTION, SLOGAN, GITHUB, EMAIL } from "../config";
+
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const last_posts = posts.slice(0, 3);
+
+// Featured projects from siteConfig
+const featuredProjects = [
+  {
+    name: "Gravity-Agent-Scanner",
+    github: "https://github.com/JianGHaN-0116/Gravity-Agent-Scanner",
+    description: "Distributed network scanning system with IPv6 intelligence agent for large-scale address discovery and analysis.",
+    techStack: ["Python", "IPv6", "AsyncIO", "Redis"],
+    badge: "Featured"
+  },
+  {
+    name: "RedAgent",
+    github: "https://github.com/JianGHaN-0116/RedAgent",
+    description: "AI-powered red team automation framework for penetration testing and vulnerability assessment.",
+    techStack: ["Python", "LLM", "ReAct", "Security"]
+  },
+  {
+    name: "Sentinel Gateway",
+    github: "https://github.com/JianGHaN-0116/sentinel-gateway",
+    description: "Intelligent Internet behavior security management system with multi-evidence fusion engine and AI Security Copilot.",
+    techStack: ["Vue3", "FastAPI", "Go", "PostgreSQL"],
+    badge: "NEW"
+  }
+];
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Hey there 👋</div>
+    <div class="text-5xl font-bold">I'm {NAME}</div>
+    <div class="text-3xl py-3 font-bold">{SUBTITLE}</div>
+    <div class="py-2">
+      <text class="text-lg">
+        {HERO_DESCRIPTION}
+      </text>
+    </div>
+    <div class="text-base italic py-2 text-neutral-content">
+      "{SLOGAN}"
+    </div>
+    <div class="mt-8">
+      <a class="btn" href={`mailto:${EMAIL}`}> Let's connect!</a>
+      <a href={GITHUB} target="_blank" class="btn btn-outline ml-5">
+        GitHub Profile
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-2">Featured Projects {"</>"}</div>
+  </div>
+
+  {featuredProjects.map((project, index) => (
+    <>
+      <HorizontalCard
+        title={project.name}
+        img="/post_img.webp"
+        desc={project.description}
+        url={project.github}
+        badge={project.badge}
+        tags={project.techStack}
+        tagsAsLabels={true}
+      />
+      {index < featuredProjects.length - 1 && <div class="divider my-0"></div>}
+    </>
+  ))}
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+  </div>
+
+  {
+    last_posts.map((post) => (
+      <>
+        <HorizontalCard
+          title={post.data.title}
+          img={post.data.heroImage}
+          desc={post.data.description}
+          url={"/blog/" + createSlug(post.data.title, post.slug)}
+          target="_self"
+          badge={post.data.badge}
+        />
+        <div class="divider my-0" />
+      </>
+    ))
+  }
+</BaseLayout>
